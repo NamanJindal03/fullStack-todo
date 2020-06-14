@@ -1,1 +1,60 @@
-<h1>In home</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <div id="todo">
+        <h1>Todo App</h1>
+        <hr>
+        <form action="">
+            <div class="row">
+                <div class="col-sm-12 flex-c">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" id="description" name="description" placeholder="task is...">
+                </div>  
+            </div>
+            <hr>
+            <div class="row">
+                <div class=" col-sm-6 col-xs-12 flex-c"> 
+                    <label for="category">CATEGORY</label>
+                    <select name="category" id="category">
+                        <option value="personal">Personal</option>
+                        <option value="work">Work</option>
+                        <option value="school">School</option>
+                        <option value="cleaning">Cleaning</option>
+                        <option value="other">Other</option>
+                    </select>   
+                </div>
+                <div class="col-sm-6 col-xs-12 flex-c">
+                    <label for="dueDate">DUE DATE</label>
+                    <input type="date" id="dueDate" name="dueDate" >
+                </div>  
+            </div>
+            <hr>
+            <div class="row" id="buttons">
+                <button id="add-btn"><i class="fa fa-plus" ></i>ADD TASK</button>
+                <button id="del-btn"><i class="fa fa-trash" ></i>DELETE TASK</button>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-xs-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-xs-8 flex-c">
+                    <p style="color:#dadada; margin-bottom: 0px;">Annual report Submission Deadline</p>
+                    <small Style="color:#939393">Display Date</small>
+                    
+                </div>
+                <div class="col-xs-3">
+                    <button>Work</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://kit.fontawesome.com/f30dc76486.js" crossorigin="anonymous"></script>
+</body>
+</html>

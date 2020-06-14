@@ -1,0 +1,96 @@
+/* Direct Changes in Bootstrap CSS */
+.row{
+    margin-left:0px!important;
+    margin-right: 0px!important;
+}
+
+
+/* Custom Css */
+body{
+    background-color: #141526;
+}
+.flex-c{
+    display: flex;
+    flex-direction: column;
+}
+#todo{
+    height: auto;
+    min-height: 200px;
+    width:50vw;
+    background-color: #232F4E;
+    margin: auto;
+    border-radius: 24px;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+h1{
+    color: #13bdad;
+    margin-bottom: 2px;
+    text-align: center;
+    padding-top: 5px;
+    /* margin-top: 0px; */
+
+}
+form .row{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+form label{
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    color:#939393;
+}
+form input[type="text"]{
+    background-color: transparent;
+    border: none;
+    font-size: 1.7rem;
+    color: #dadada;
+}
+form input[type="text"]:focus{
+    outline:none;
+    border: none;
+}
+hr{
+    margin:0px;
+}
+::placeholder { 
+    color: #c9bdbd;
+    opacity: 1; 
+  }
+  
+  :-ms-input-placeholder { 
+    color: #c9bdbd;
+  }
+  
+  ::-ms-input-placeholder { 
+    color: #c9bdbd;
+  }
+  
+#dueDate, #category{
+    height:2.7rem;
+}
+  
+
+/* Buttons css */
+#buttons{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#buttons button{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 130px;
+    color:white;
+}
+#buttons button i{
+    margin-right: 6px;
+    color:white;
+}
+#add-btn{
+    background-color: black;
+}
+#del-btn{
+    background-color: red;
+}
