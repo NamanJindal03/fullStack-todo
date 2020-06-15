@@ -20,8 +20,6 @@ body{
     background-color: #232F4E;
     margin: auto;
     border-radius: 24px;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 h1{
@@ -29,9 +27,9 @@ h1{
     margin-bottom: 2px;
     text-align: center;
     padding-top: 5px;
-    /* margin-top: 0px; */
-
 }
+
+/* Css for form elements */
 form .row{
     padding-top: 4px;
     padding-bottom: 4px;
@@ -51,6 +49,7 @@ form input[type="text"]:focus{
     outline:none;
     border: none;
 }
+
 hr{
     margin:0px;
 }
@@ -72,7 +71,7 @@ hr{
 }
   
 
-/* Buttons css */
+/* Buttons css add delete*/
 #buttons{
     text-align: center;
     padding-top: 20px;
@@ -93,4 +92,10 @@ hr{
 }
 #del-btn{
     background-color: red;
+}
+
+#task-description-display{
+    color:#dadada; 
+    margin-bottom: 0px;
+    font-size:1.65rem;
 }

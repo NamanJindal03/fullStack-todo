@@ -3,14 +3,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
+
+    <!-- Including stylesheet of Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+    <!-- Custom CSS styleSheet -->
     <link rel="stylesheet" href="/css/home.css">
+    
 </head>
 <body>
     <div id="todo">
         <h1>Todo App</h1>
         <hr>
-        <form action="">
+
+        <!-- Start of form having a post route -->
+        <form method="POST">
             <div class="row">
                 <div class="col-sm-12 flex-c">
                     <label for="description">DESCRIPTION</label>
@@ -36,25 +43,35 @@
             </div>
             <hr>
             <div class="row" id="buttons">
-                <button id="add-btn"><i class="fa fa-plus" ></i>ADD TASK</button>
-                <button id="del-btn"><i class="fa fa-trash" ></i>DELETE TASK</button>
+                <button id="add-btn" formaction="/task/add-task"><i class="fa fa-plus" ></i>ADD TASK</button>
+                <button id="del-btn" formaction="/task/delete-task"><i class="fa fa-trash" ></i>DELETE TASK</button>
             </div>
-            <hr>
-            <div class="row">
-                <div class="col-xs-1">
-                    <input type="checkbox">
-                </div>
-                <div class="col-xs-8 flex-c">
-                    <p style="color:#dadada; margin-bottom: 0px;">Annual report Submission Deadline</p>
-                    <small Style="color:#939393">Display Date</small>
+
+            <!-- Displays all the todos -->
+            <% for(task of tasks){ %>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-1">
+                        <input type="checkbox" id="<%= task.id %>" name="task" value="<%= task.id %>">
+                    </div>
+                    <div class="col-xs-8 flex-c">
+                        <p  id="task-description-display"><%= task.description%></p>
+                        <small Style="color:#939393">
+                            <i class="fa fa-calendar-alt"></i>
+                            <%= month[task.dueDate.getMonth()] %> <%= task.dueDate.getDate() %>, <%= task.dueDate.getFullYear() %>
+                        </small>
+                        
+                    </div>
+                    <div class="col-xs-3" id="<%= task.category %>">
+                        <button><%= task.category %></button>
+                    </div>
                     
                 </div>
-                <div class="col-xs-3">
-                    <button>Work</button>
-                </div>
-            </div>
+            <% } %>
         </form>
     </div>
+
+    <!-- Script for font awesome icons -->
     <script src="https://kit.fontawesome.com/f30dc76486.js" crossorigin="anonymous"></script>
 </body>
 </html>
