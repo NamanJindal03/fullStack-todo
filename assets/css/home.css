@@ -105,16 +105,16 @@ hr{
     background-color: purple;
 }
 .personal{
-    background-color: greenyellow;
+    background-color: #74b510;
 }
 .work{
-    background-color: yellow;
+    background-color: #c0c014;
 }
 .other{
     background-color: orange;
 }
 .cleaning{
-    background-color: burlywood;
+    background-color: #a94442;
 }
 .btn-category-display{
     color:white;

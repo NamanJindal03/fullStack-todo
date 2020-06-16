@@ -11,3 +11,4 @@ To run the application just do `npm install` to install all the node packages as
 2) Delete of Task
 3) Multiple Task delete at a time
 4) Persistent Storage 
+5) The Task For which the deadlines have passed comes in red

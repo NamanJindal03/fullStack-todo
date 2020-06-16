@@ -56,10 +56,24 @@
                     </div>
                     <div class="col-xs-8 flex-c">
                         <p  id="task-description-display"><%= task.description%></p>
-                        <small Style="color:#939393">
-                            <i class="fa fa-calendar-alt"></i>
-                            <%= month[task.dueDate.getMonth()] %> <%= task.dueDate.getDate() %>, <%= task.dueDate.getFullYear() %>
-                        </small>
+                            <% 
+                                var hour = new Date().getHours();
+                                var minute = new Date().getHours();
+                                var second = new Date().getHours();
+                                var finalTime = hour*3600 + minute*60*1000 + second*1000;
+                                var day = 24*3600*1000 -2 ;
+                            %>
+                            <% if(Date.parse(task.dueDate)+day < Date.now() - finalTime ) {%>
+                                <small Style="color:red">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <%= month[task.dueDate.getMonth()] %> <%= task.dueDate.getDate() %>, <%= task.dueDate.getFullYear() %>
+                                </small>
+                            <% } else{%>
+                                <small Style="color:#939393">
+                                    <i class="fa fa-calendar-alt"></i>
+                                    <%= month[task.dueDate.getMonth()] %> <%= task.dueDate.getDate() %>, <%= task.dueDate.getFullYear() %>
+                                </small>
+                            <% }%>
                         
                     </div>
                     <div class="col-xs-3" >
