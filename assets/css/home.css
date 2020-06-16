@@ -99,3 +99,24 @@ hr{
     margin-bottom: 0px;
     font-size:1.65rem;
 }
+
+/* Category Buttons */
+.school{
+    background-color: purple;
+}
+.personal{
+    background-color: greenyellow;
+}
+.work{
+    background-color: yellow;
+}
+.other{
+    background-color: orange;
+}
+.cleaning{
+    background-color: burlywood;
+}
+.btn-category-display{
+    color:white;
+    width: 7.5rem;
+}
