@@ -2,8 +2,8 @@
 .row{
     margin-left:0px!important;
     margin-right: 0px!important;
+   
 }
-
 
 /* Custom Css */
 body{
@@ -32,7 +32,7 @@ h1{
 /* Css for form elements */
 form .row{
     padding-top: 4px;
-    padding-bottom: 4px;
+    padding-bottom: 10px;
 }
 form label{
     font-size: 1.3rem;
@@ -70,6 +70,14 @@ hr{
     height:2.7rem;
 }
   
+.display-task{
+    display: flex;
+}
+.align-components-task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* Buttons css add delete*/
 #buttons{
@@ -105,13 +113,13 @@ hr{
     background-color: purple;
 }
 .personal{
-    background-color: #74b510;
+    background-color: #5e8d15;
 }
 .work{
-    background-color: #c0c014;
+    background-color: #bc1f6b;
 }
 .other{
-    background-color: orange;
+    background-color: #d7961e;
 }
 .cleaning{
     background-color: #a94442;
@@ -119,4 +127,17 @@ hr{
 .btn-category-display{
     color:white;
     width: 7.5rem;
+}
+
+#select-all-div{
+    text-align: end;
+    padding-right: 4%;
+}
+
+#select-all-div button{
+    border-radius: 18px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #36c4c4;
+    outline: none;
 }

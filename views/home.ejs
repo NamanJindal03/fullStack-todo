@@ -1,4 +1,3 @@
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,15 +46,24 @@
                 <button id="del-btn" formaction="/task/delete-task"><i class="fa fa-trash" ></i>DELETE TASK</button>
             </div>
 
+            <!-- Displays select all and delete all only if there is some task present in the todo -->
+            <% if(tasks.length >0){ %>
+                <div class="row" id="select-all-div">
+                    <button id="btn-select">Select All</button>
+                    <button id="btn-remove">Deselect All</button>
+                </div>
+            <% } %>
             <!-- Displays all the todos -->
             <% for(task of tasks){ %>
                 <hr>
-                <div class="row">
-                    <div class="col-xs-1">
+                <div class="row display-task">
+                    <div class="col-xs-1 align-components-task">
                         <input type="checkbox" id="<%= task.id %>" name="task" value="<%= task.id %>">
                     </div>
                     <div class="col-xs-8 flex-c" id="task-description-display-<%= task.id%>">
                         <p   class="task-description-display"><%= task.description%></p>
+
+                            <!-- Calculation for dates -->
                             <% 
                                 var hour = new Date().getHours();
                                 var minute = new Date().getHours();
@@ -63,6 +71,9 @@
                                 var finalTime = hour*3600 + minute*60*1000 + second*1000;
                                 var day = 24*3600*1000 -2 ;
                             %>
+
+                            <!-- checks whether a date has already passed or not and assigns color according to that to date display-->
+
                             <% if(Date.parse(task.dueDate)+day < Date.now() - finalTime ) {%>
                                 <small Style="color:red" >
                                     <i class="fa fa-calendar-alt"></i>
@@ -76,7 +87,7 @@
                             <% }%>
                         
                     </div>
-                    <div class="col-xs-3" >
+                    <div class="col-xs-3 align-components-task" >
                         <button class="<%= task.category %> btn-category-display"><%= task.category %></button>
                     </div>
                     
@@ -86,8 +97,11 @@
     </div>
 
     <!-- Script for font awesome icons -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f30dc76486.js" crossorigin="anonymous"></script>
+
+    <!-- Script for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- custom js -->
     <script src="/js/home.js"></script>
 </body>
 </html>

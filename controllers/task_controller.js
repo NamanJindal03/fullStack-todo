@@ -7,7 +7,7 @@ module.exports.add = (req, res) =>{
       console.error(err);
       return res.redirect("/");
     }
-    return res.redirect("/");
+    return res.redirect("back");
   });
 }
 

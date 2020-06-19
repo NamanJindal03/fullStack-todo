@@ -3,7 +3,6 @@ module.exports.home = (req, res) =>{
 
     //This will help to display month in the front end, as the default month function gives a number for the month
     const month = [
-        "",
         "JAN",
         "FEB",
         "MAR",
