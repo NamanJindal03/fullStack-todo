@@ -54,8 +54,8 @@
                     <div class="col-xs-1">
                         <input type="checkbox" id="<%= task.id %>" name="task" value="<%= task.id %>">
                     </div>
-                    <div class="col-xs-8 flex-c">
-                        <p  id="task-description-display"><%= task.description%></p>
+                    <div class="col-xs-8 flex-c" id="task-description-display-<%= task.id%>">
+                        <p   class="task-description-display"><%= task.description%></p>
                             <% 
                                 var hour = new Date().getHours();
                                 var minute = new Date().getHours();
@@ -64,7 +64,7 @@
                                 var day = 24*3600*1000 -2 ;
                             %>
                             <% if(Date.parse(task.dueDate)+day < Date.now() - finalTime ) {%>
-                                <small Style="color:red">
+                                <small Style="color:red" >
                                     <i class="fa fa-calendar-alt"></i>
                                     <%= month[task.dueDate.getMonth()] %> <%= task.dueDate.getDate() %>, <%= task.dueDate.getFullYear() %>
                                 </small>
@@ -86,6 +86,8 @@
     </div>
 
     <!-- Script for font awesome icons -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/f30dc76486.js" crossorigin="anonymous"></script>
+    <script src="/js/home.js"></script>
 </body>
 </html>

@@ -94,7 +94,7 @@ hr{
     background-color: red;
 }
 
-#task-description-display{
+.task-description-display{
     color:#dadada; 
     margin-bottom: 0px;
     font-size:1.65rem;
