@@ -49,6 +49,7 @@
             <!-- Displays select all and delete all only if there is some task present in the todo -->
             <% if(tasks.length >0){ %>
                 <div class="row" id="select-all-div">
+                    <span id="count-span">Task Count: <%= tasks.length %></span>
                     <button id="btn-select">Select All</button>
                     <button id="btn-remove">Deselect All</button>
                 </div>

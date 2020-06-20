@@ -141,3 +141,15 @@ hr{
     background-color: #36c4c4;
     outline: none;
 }
+
+#count-span{
+    float: left;
+    margin-left: 18px;
+    color: white;
+    font-size: 15px;
+    margin-top: 4px;
+}
+
+.display-task{
+    
+}

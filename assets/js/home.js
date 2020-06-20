@@ -53,6 +53,12 @@ let func = function(){
             
         })
     }
+    let categoryButtons = $('.display-task button');
+    for(categorybtn of categoryButtons){
+        categorybtn.addEventListener('click', function(e){
+            e.preventDefault();
+        })
+    }
     unselectAllTask();
     selectAllTask();
 }();
