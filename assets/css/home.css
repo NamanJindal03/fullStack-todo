@@ -98,8 +98,14 @@ hr{
 #add-btn{
     background-color: black;
 }
+#add-btn:hover{
+    background-color: #17191b;
+}
 #del-btn{
     background-color: red;
+}
+#del-btn:hover{
+    background-color: #a70000;
 }
 
 .task-description-display{
@@ -150,6 +156,3 @@ hr{
     margin-top: 4px;
 }
 
-.display-task{
-    
-}
